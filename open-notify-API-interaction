@@ -2,9 +2,9 @@ import json
 from typing import Set, Any
 
 import requests
-#gmail = requests.get("https://www.googleapis.com/gmail/v1/users/niranjan.1258@gmail.com/profile")
-#twitter = requests.get("https://api.twitter.com/1.1/statuses/show/210462857140252672.json")
-#github = requests.get("https://api.github.com/users/nattlefrost/repos")
+#gmail = requests.get("https://www.googleapis.com/gmail/v1/users/<user>/profile")
+#twitter = requests.get("https://api.twitter.com/1.1/statuses/show/<tweet id>.json")
+#github = requests.get("https://api.github.com/users/<user>/repos")
 testreq = requests.get('http://api.open-notify.org/astros.json')
 response = testreq.json()
 #print ("The dudes in space right now are ", response['people'])
