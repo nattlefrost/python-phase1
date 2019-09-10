@@ -1,0 +1,24 @@
+import json
+from typing import Set, Any
+
+import requests
+#gmail = requests.get("https://www.googleapis.com/gmail/v1/users/niranjan.1258@gmail.com/profile")
+#twitter = requests.get("https://api.twitter.com/1.1/statuses/show/210462857140252672.json")
+#github = requests.get("https://api.github.com/users/nattlefrost/repos")
+testreq = requests.get('http://api.open-notify.org/astros.json')
+response = testreq.json()
+#print ("The dudes in space right now are ", response['people'])
+item = response['people']
+peeps = list(item)
+peep1 = peeps[0]
+peep2 = peeps[1]
+peep3 = peeps[2]
+print(peep1['name'],peep2['name'],peep3['name'])
+alist = list()
+name1 = peep1['name']
+name2 = peep2['name']
+name3 = peep3['name']
+alist.extend([name1,name2,name3])
+print(alist)
+for item in alist:
+    print(item)
